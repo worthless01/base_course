@@ -1,4 +1,4 @@
-a = input()
+a = input(0)
 print(a)
 
 a = input('Введите значение a: 1')
