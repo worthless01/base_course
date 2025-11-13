@@ -10,6 +10,6 @@ v=math.sqrt(a/b)
 
 print(v)
 
-N=(2/math.sqrt(nb.p))*math.sqrt(pc.h)*(((pc.k)*(nb.T))**(3/2))*(pc.e)**(nb.e/(pc.k*nb.T))*(nb.e)**(nb.T/2)
+N=(2/math.sqrt(nb.p))*math.sqrt(pc.h)*(((pc.k)*(nb.T))**(3/2))*((pc.e)**(nb.e/(pc.k*nb.T)))*((nb.e)**(nb.T/2))
 
 print(N)
