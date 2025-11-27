@@ -15,7 +15,7 @@
 import numpy as np
 
 def mean_func(array):
-    pass
+    
 
 
 test = np.array([3, 5, 6, 7, 8])
