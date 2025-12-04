@@ -1,64 +1,33 @@
-# def a():
+import random
+
+list1 = []
+list2 = []
+list3 = []
+
+for i in range(3):
+   list1.append(random.randint(0, 100))
+   list2.append(random.randint(0, 100))
+   list3.append(random.randint(0, 100))
+
+print('1 list:', list1)
+print('2 list:', list2)
+print('3 list:', list3)
     
-#     n = int(input('кол-во чисел: '))
-#     numbers = []
-#     for i in range(n):
-#         num = int(input(f'Введите число {i+1}: '))
-#         numbers.append(num)
-        
-#     arithmetic = sum(numbers) / n
-#     return arithmetic
+max = max(max(list1), max(list2), max(list3))
+print('max:',max)
 
-# result = a()
-# print(f'ср арифметическое равно:{result}')
-
-import numpy as np
-
-def mean_func(array):
-    return np.mean(array)
-
-test = np.array([3, 5, 6, 7, 8])
-result = mean_func(test)
-print(f'среднее арифм равно: {result}')
+sum = sum(list1) + sum(list2) + sum(list3)
+print('sum:',sum)
 
 
 
 
 
 
+N = 5
 
-
-
-def mean_arifmetic(array):
-    s = 0
-    for element in array:
-        s = s + element
-
-    print(s / len(array))
-    return s / len(array)
-
-test = np.array([3, 6, 7, 9, 1])
-mean_arifmetic(test)
-
-
-
-
-
-
-
-def mean_arifmetic(*arg):
-    s = 0
-    if len(arg) > 1:
-        for element in arg:
-            s = s + element
-            len_arg = len(arg)
-    else:
-        for element in arg[0]:
-            s = s + element
-            len_arg = len(arg[0])
-        
-    print(s / len(arg[0]))
-    return s / len(arg[0])
-
-test = np.array([3, 6, 7, 9, 1])
-mean_arifmetic(test)
+def randomer():
+   return [random.randint(0, 100) for _ in range(N)]
+           
+array_1, array_2, array_3 = randomer(), randomer(), randomer()
+print(array_1, array_2, array_3)
