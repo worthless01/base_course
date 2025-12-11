@@ -1,17 +1,19 @@
-name = 'name surname'
+import matplotlib.pyplot as plt
+import numpy as np
 
-up = '_'.join(name.upper()) + '_'
-up_codes = [ord(simbol) for simbol in up]
-print(up)
+def hyperbola(k=7, x=0):
+   
+    x = np.arange(-10, 10, 1)
+    y = k / x
 
-low = '_'.join(name.lower()) + '_'
-low_codes = [ord(simbol) for simbol in low]
-print(low)
+    plt.plot(x, y, label = 'my hyperbola')
+    plt.xlabel('coord - x')
+    plt.ylabel('coord - y')
+    plt.title('hyperbola')
+    plt.axis('equal')
+    plt.legend()
 
-print('up:', up_codes)
-print('low:', low_codes)
+    plt.savefig('DZ_2.png')
 
-all = up_codes + low_codes
-
-print('max:', max(all))
-print('min:', min(all))
+if __name__ == '__main__':
+    hyperbola()

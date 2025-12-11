@@ -1,29 +1,18 @@
-import  time
+import matplotlib.pyplot as plt
+import numpy as np
 
-start_time = time.time()
+def elipse_plotter(a=1, b=0.5):
+    x = np.arange(-2*a, 2*a, 0.1)
+    y = np.arange(-2*a, 2*a, 0.1)
 
-M = 3
-N = 2
+    X, Y = np.meshgrid(x,y)
 
-for i in range(M):
-    print(f'внешний цикл: {i}')
-    time.sleep(1)
+    fxy = X**2 / a**2 + Y**2 / b**2 - a**2 - 1
 
-for j in range(N):
-    print(f'внутренний цикл: {j}')
-    time.sleep(1)
+    plt.contour(X, Y, fxy, levels=[0])
+    plt.axis('equal')
 
-end_time = time.time()
+    plt.savefig('DZ_3.png')
 
-time_ = end_time - start_time
-print(f'общее время: {time_} секунд')
-
-
-
-
-for i in range(2):
-    print(f'i: {i}')
-    time.sleep(1)
-    for j in range(3):
-        print(f'\t j: {j}')
-        time.sleep(1)
+if __name__ == '__main__':
+    elipse_plotter()
